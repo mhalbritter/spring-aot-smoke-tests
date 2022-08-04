@@ -1,13 +1,12 @@
-package com.example.sessionrediswebflux;
+package com.example.session.redis.webflux;
 
 import org.springframework.aot.smoketest.thirdpartyhints.NettyRuntimeHints;
-import org.springframework.aot.smoketest.thirdpartyhints.ThymeleafRuntimeHints;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
 @SpringBootApplication
-@ImportRuntimeHints({ NettyRuntimeHints.class, ThymeleafRuntimeHints.class })
+@ImportRuntimeHints(NettyRuntimeHints.class)
 public class SessionRedisWebfluxApplication {
 
 	public static void main(String[] args) throws InterruptedException {
