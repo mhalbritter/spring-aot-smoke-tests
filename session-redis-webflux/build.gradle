@@ -7,6 +7,17 @@ plugins {
 
 apply plugin: "org.springframework.boot.aot"
 
+repositories {
+	mavenLocal()
+}
+
+configurations.all {
+	resolutionStrategy {
+		// Comment in to use no metadata lettuce
+		// force "io.lettuce:lettuce-core:6.2.0.RELEASE-NO-METADATA"
+	}
+}
+
 dependencies {
 	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
